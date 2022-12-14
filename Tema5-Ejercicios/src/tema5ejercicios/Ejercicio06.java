@@ -6,23 +6,31 @@ public class Ejercicio06 {
 
 	public static void main(String[] args) {
 		
-		double nums[] = new double[10];
+		int nums[] = new int[8];
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Introduzca 10 números reales: ");
+		System.out.println("Introduzca 8 números enteros: ");
 		
 		for (int i = 0 ; i < nums.length ; i++) {
 			
-			nums[i] = sc.nextDouble();
+			nums[i] = sc.nextInt();
 			
 		}
 		
 		System.out.println();
 		
-		for (int i = nums.length ; i >= 0 ; i--) {
+		for (int values : nums) {
 			
-			System.out.println(nums[i--]);
+			if (values % 2 == 0) {
+				
+				System.out.println(values + " par");
+				
+			} else {
+				
+				System.out.println(values + " impar");
+				
+			}
 			
 		}
 		
